@@ -125,6 +125,7 @@ define( [ "./config" ], function ( Config ) {
      */
     LocationTag.prototype.createLocator = function () {
         var
+            THREE = window.THREE,
             scene = LocationTag.prototype.AreaMap.scene,
             text = this.opts.text,
 

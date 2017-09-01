@@ -1,0 +1,28 @@
+@import "variables";
+.#{$ns}-alert {
+    padding: 15px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    text-align: center;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    &.fixed-top {
+        z-index: 10;
+        position: fixed;
+        left: 0;
+        top: -60px;
+        width: 100%;
+
+        -webkit-transition: top .6s ease;
+        -o-transition: top .6s ease;
+        transition: top .6s ease;
+    }
+}
+.#{$ns}-alert-warning {
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+}

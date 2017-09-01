@@ -1,0 +1,86 @@
+@import "variables";
+.#{$ns}-area-map {
+    position: relative;
+    width: 90%;
+    height: 80%;
+    padding: 20px;
+    margin: 20px auto;
+}
+.#{$ns}-area-map-view {
+    width: 100%;
+    height: 100%;
+}
+.#{$ns}-area-map-control {
+    position: absolute;
+    bottom: -26px;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+.#{$ns}-theme-photo,
+.#{$ns}-theme-tv {
+    width: 100%;
+    height: 100%;
+    &:before {
+        content: "";
+        display: table;
+    }
+}
+
+.#{$ns}-theme-photo {
+
+    background: #d7d7d7;
+
+    .#{$ns}-area-map {
+        position: relative;
+
+        background: #fafafa;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        color: rgba(0, 0, 0, 0.8);
+        text-shadow: 0 1px 0 #ffffff;
+
+        &:before,
+        &:after {
+            position: absolute;
+            content: "";
+            top: 10px;
+            bottom: 15px;
+            left: 10px;
+            width: 50%;
+            box-shadow: 0 15px 10px rgba(0, 0, 0, 0.5);
+            -webkit-transform: rotate(-3deg);
+            -moz-transform: rotate(-3deg);
+            -o-transform: rotate(-3deg);
+            -ms-transform: rotate(-3deg);
+            transform: rotate(-3deg);
+            z-index: -1;
+        }
+        &:after {
+            right: 10px;
+            left: auto;
+            -webkit-transform: rotate(3deg);
+            -moz-transform: rotate(3deg);
+            -o-transform: rotate(3deg);
+            -ms-transform: rotate(3deg);
+            transform: rotate(3deg);
+        }
+    }
+}
+
+.#{$ns}-theme-tv {
+    background: #d8cebb url(../images/pinstripe_dark.png) repeat top left;
+
+    .#{$ns}-area-map {
+        background: #312f2d;
+        background: linear-gradient(to right, #2c3b4e, #4a688a, #2c3b4e);
+        border-radius: 4px;
+        -webkit-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, .8);
+        -moz-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, .8);
+        box-shadow: 0 15px 10px -10px rgba(0, 0, 0, .8);
+    }
+
+}

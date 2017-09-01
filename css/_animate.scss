@@ -1,0 +1,163 @@
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+.animated.infinite {
+    animation-iteration-count: infinite
+}
+
+@keyframes bounceInLeft {
+    0%,60%,75%,90%,to {
+        animation-timing-function: cubic-bezier(.215,.61,.355,1)
+    }
+
+    0% {
+        opacity: 0;
+        transform: translate3d(-3000px,0,0)
+    }
+
+    60% {
+        opacity: 1;
+        transform: translate3d(25px,0,0)
+    }
+
+    75% {
+        transform: translate3d(-10px,0,0)
+    }
+
+    90% {
+        transform: translate3d(5px,0,0)
+    }
+
+    to {
+        transform: none
+    }
+}
+
+.bounceInLeft {
+    animation-name: bounceInLeft;
+}
+
+@keyframes bounceInDown {
+    0%,60%,75%,90%,to {
+        animation-timing-function: cubic-bezier(.215,.61,.355,1)
+    }
+
+    0% {
+        opacity: 0;
+        transform: translate3d(0,-3000px,0)
+    }
+
+    60% {
+        opacity: 1;
+        transform: translate3d(0,25px,0)
+    }
+
+    75% {
+        transform: translate3d(0,-10px,0)
+    }
+
+    90% {
+        transform: translate3d(0,5px,0)
+    }
+
+    to {
+        transform: none
+    }
+}
+
+.bounceInDown {
+    animation-name: bounceInDown
+}
+
+
+@keyframes bounceInRight {
+    0%,60%,75%,90%,to {
+        animation-timing-function: cubic-bezier(.215,.61,.355,1)
+    }
+
+    0% {
+        opacity: 0;
+        transform: translate3d(3000px,0,0)
+    }
+
+    60% {
+        opacity: 1;
+        transform: translate3d(-25px,0,0)
+    }
+
+    75% {
+        transform: translate3d(10px,0,0)
+    }
+
+    90% {
+        transform: translate3d(-5px,0,0)
+    }
+
+    to {
+        transform: none
+    }
+}
+
+.bounceInRight {
+    animation-name: bounceInRight
+}
+
+@keyframes tada {
+    0% {
+        transform: scaleX(1)
+    }
+
+    10%,20% {
+        transform: scale3d(.9,.9,.9) rotate(-3deg)
+    }
+
+    30%,50%,70%,90% {
+        transform: scale3d(1.1,1.1,1.1) rotate(3deg)
+    }
+
+    40%,60%,80% {
+        transform: scale3d(1.1,1.1,1.1) rotate(-3deg)
+    }
+
+    to {
+        transform: scaleX(1)
+    }
+}
+
+.tada {
+    animation-name: tada
+}
+
+@keyframes bounceInUp {
+    0%,60%,75%,90%,to {
+        animation-timing-function: cubic-bezier(.215,.61,.355,1)
+    }
+
+    0% {
+        opacity: 0;
+        transform: translate3d(0,3000px,0)
+    }
+
+    60% {
+        opacity: 1;
+        transform: translate3d(0,-20px,0)
+    }
+
+    75% {
+        transform: translate3d(0,10px,0)
+    }
+
+    90% {
+        transform: translate3d(0,-5px,0)
+    }
+
+    to {
+        transform: translateZ(0)
+    }
+}
+
+.bounceInUp {
+    animation-name: bounceInUp
+}

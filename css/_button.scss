@@ -1,0 +1,30 @@
+.button-media {
+    width: 77px;
+    height: 77px;
+    border: none 0;
+    padding: 0;
+    background: url(../images/media_buttons.png) no-repeat 0 0 transparent;
+    cursor: pointer;
+    border-radius: 100px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    &:focus  {
+        outline: none 0;
+    }
+}
+
+.button-media-play {
+    background-position: 0 -154px;
+    &:hover,
+    &.active,
+    &:focus {
+        background-position: 0 0;
+    }
+}
+.button-media-pause {
+    background-position: 0 -231px;
+    &:hover,
+    &.active,
+    &:focus{
+        background-position: 0 -77px;
+    }
+}

@@ -1,0 +1,141 @@
+@import "variables";
+
+.#{$ns}-progress {
+    -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+
+    height: 25px;
+    background: #262626;
+    padding: 5px;
+    overflow: visible;
+    border-radius: 20px;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #7992a8;
+    margin-top: 50px;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.#{$ns}-progress-bar {
+    float: left;
+    width: 0;
+    height: 100%;
+    font-size: 12px;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
+    background-color: #337ab7;
+    -webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+    -webkit-transition: width .6s ease;
+    -o-transition: width .6s ease;
+    transition: width .6s ease;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.#{$ns}-progress-striped .#{$ns}-progress-bar, .#{$ns}-progress-bar-striped {
+    background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+    background-image: -o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+    background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+    -webkit-background-size: 40px 40px;
+    background-size: 40px 40px;
+}
+
+.#{$ns}-progress-bar-success {
+    background-color: #5cb85c;
+}
+
+.#{$ns}-progress.active .#{$ns}-progress-bar, .#{$ns}-progress-bar.active {
+    -webkit-animation: #{$ns}-progress-bar-stripes 2s linear infinite;
+    -o-animation: #{$ns}-progress-bar-stripes 2s linear infinite;
+    animation: #{$ns}-progress-bar-stripes 2s linear infinite;
+}
+
+.#{$ns}-progress .#{$ns}-progress-bar {
+    border-radius: 20px;
+    position: relative;
+    animation: animate-positive 2s;
+}
+.#{$ns}-progress-bar.active {
+    animation: reverse #{$ns}-progress-bar-stripes 0.40s linear infinite, animate-positive 2s;
+}
+.#{$ns}-progress-value {
+    display: block;
+    padding: 3px 7px;
+    font-size: 13px;
+    color: #fff;
+    border-radius: 4px;
+    background: #191919;
+    border: 1px solid #000;
+    position: absolute;
+    top: -40px;
+    right: -10px;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    &:after {
+        content: "";
+        border-top: 10px solid #191919;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        position: absolute;
+        bottom: -6px;
+        left: 26%;
+
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+}
+
+.#{$ns}-progress {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    //height: 25px;
+    margin-left: -300px;
+    margin-top: -20px;
+}
+.#{$ns}-progress-value {
+    min-width: 180px;
+    right: -118px;
+}
+
+
+@-webkit-keyframes #{$ns}-progress-bar-stripes {
+    from {
+        background-position: 40px 0
+    }
+
+    to {
+        background-position: 0 0
+    }
+}
+
+@-o-keyframes #{$ns}-progress-bar-stripes {
+    from {
+        background-position: 40px 0
+    }
+
+    to {
+        background-position: 0 0
+    }
+}
+
+@keyframes #{$ns}-progress-bar-stripes {
+    from {
+        background-position: 40px 0
+    }
+
+    to {
+        background-position: 0 0
+    }
+}

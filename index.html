@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset=utf-8>
+    <title>监控</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script data-main="./js/main" src="js/requirejs/2.1.22/require.js"></script>
+</head>
+<body>
+<!--
+    data-font-url
+        three.js用到的中文字体（微软雅黑粗体）json文件的URL
+
+    data-dxf-file-url
+        获取dxf文件的URL
+
+    data-id-to-name-mapping-url
+        获取id到name的映射表。
+        后台返回的数据：（参考：JsonResult.java）
+            {
+                "success": Boolean,
+                "data": {
+                    "56789": "张三",
+                    "56799": "李四",
+                    ...
+                }
+            }
+
+    data-websocket-url
+        WebSocket 的 URL
+
+-->
+<div class="pku-theme-tv">
+
+    <div class="pku-progress" id="areaMapProgress" style="display: none;">
+        <div class="pku-progress-bar pku-progress-bar-success pku-progress-bar-striped active" id="areaMapProgressBar" style="width: 1%;">
+            <div class="pku-progress-value"><span id="areaMapProgressNum">0</span>% <span id="areaMapProgressTxt">准备数据...</span></div>
+        </div>
+    </div>
+
+    <div class="pku-area-map"
+         id="areaMap"
+         style="display: none;"
+
+         data-font-url="./fonts/MicrosoftYaHei_Bold.json"
+         data-dxf-file-url="./data/zhian-0719-21_LAYER_1.dxf"
+         data-id-to-name-mapping-url="./data/idToNameMapping.json"
+         data-websocket-url="ws://192.168.1.241:8080/LocalSense/localsense">
+
+        <div class="pku-area-map-view" id="areaMapView"></div>
+
+        <div class="pku-area-map-control" id="areaMapControl" style="display: none;">
+            <button type="button" class="button-media button-media-play js--mediaBtn js--playBtn" title="启动"></button>
+            <button type="button" class="button-media button-media-pause js--mediaBtn" title="暂停" style="display: none;"></button>
+        </div>
+
+    </div>
+</div>
+
+
+</body>
+</html>

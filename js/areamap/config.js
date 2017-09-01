@@ -2,6 +2,7 @@
  * @fileoverview 配置
  *
  * @author 吴钦飞
+ * @link https://github.com/forwardNow/AreaMap
  */
 define( [ "jquery", "./alert" ], function ( $, Alert ) {
     "use strict";

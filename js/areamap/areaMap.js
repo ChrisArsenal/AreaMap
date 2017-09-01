@@ -37,7 +37,8 @@
  *           人离开以及第一次出现时，都会去请求
  *
  *       2）待续
- *       
+ *
+ * @link https://github.com/forwardNow/AreaMap
  * @author 吴钦飞
  */
 define( [ "jquery", "./locationTag", "./config", "threedxf" ], function ( $, LocationTag, Config ) {

@@ -1,5 +1,6 @@
 /**
  * @fileoverview 信息提示
+ * @link https://github.com/forwardNow/AreaMap
  * @author 吴钦飞
  */
 define( [ "jquery" ], function ( $ ) {

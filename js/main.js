@@ -17,6 +17,7 @@ require.config( {
 /**
  * @fileoverview
  *      入口文件
+ * @link https://github.com/forwardNow/AreaMap
  * @author 吴钦飞
  */
 define( [ "jquery", "./areamap/areaMap", "./areamap/alert" ], function ( $, AreaMap, Alert ) {

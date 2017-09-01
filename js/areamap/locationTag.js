@@ -1,6 +1,7 @@
 /**
  * @fileoverview 位置标签
  * @author 吴钦飞
+ * @link https://github.com/forwardNow/AreaMap
  */
 define( [ "./config" ], function ( Config ) {
 

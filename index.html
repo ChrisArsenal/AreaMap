@@ -8,7 +8,16 @@
     <script data-main="./js/main" src="js/requirejs/2.1.22/require.js"></script>
 </head>
 <body>
-<!--
+
+<div class="pku-theme-tv">
+
+    <div class="pku-progress" id="areaMapProgress" style="display: none;">
+        <div class="pku-progress-bar pku-progress-bar-success pku-progress-bar-striped active" id="areaMapProgressBar" style="width: 1%;">
+            <div class="pku-progress-value"><span id="areaMapProgressNum">0</span>% <span id="areaMapProgressTxt">准备数据...</span></div>
+        </div>
+    </div>
+
+    <!--
     data-font-url
         three.js用到的中文字体（微软雅黑粗体）json文件的URL
 
@@ -30,15 +39,7 @@
     data-websocket-url
         WebSocket 的 URL
 
--->
-<div class="pku-theme-tv">
-
-    <div class="pku-progress" id="areaMapProgress" style="display: none;">
-        <div class="pku-progress-bar pku-progress-bar-success pku-progress-bar-striped active" id="areaMapProgressBar" style="width: 1%;">
-            <div class="pku-progress-value"><span id="areaMapProgressNum">0</span>% <span id="areaMapProgressTxt">准备数据...</span></div>
-        </div>
-    </div>
-
+    -->
     <div class="pku-area-map"
          id="areaMap"
          style="display: none;"

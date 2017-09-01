@@ -130,18 +130,22 @@ define( [ "jquery", "./alert" ], function ( $, Alert ) {
 
         console.info( "准备数据..." );
 
-        // 3秒走完进度条
+        // 8秒走完进度条
         timerId = window.setInterval( function () {
             if ( count >= 100 ) {
-                window.clearInterval( timerId );
-                window.setTimeout( function () {
-                    $progress.fadeOut( 600 );
-                }, 1500 );
-                count = 99;
+                if ( _this._isPrepared === false ) {
+                    count = 98;
+                } else {
+                    window.clearInterval( timerId );
+                    window.setTimeout( function () {
+                        $progress.fadeOut( 600 );
+                    }, 1500 );
+                    count = 99;
+                }
             }
             $progressBar.css( "width", ++count + "%" );
             $areaMapProgressNum.text( count );
-        }, 3 * 1000 / 100 );
+        }, 8 * 1000 / 100 );
 
         this._getDxfData( function () {
             console.info( "DXF文件请求完毕！" );

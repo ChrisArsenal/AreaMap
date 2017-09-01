@@ -65,8 +65,11 @@ define( [ "jquery", "./areamap/areaMap", "./areamap/alert" ], function ( $, Area
             // 启动
             if ( $this.is( ".js--playBtn" ) ) {
 
-
-                webSocketInstance = new WebSocket( AreaMap.Config.websocketUrl );
+                try {
+                    webSocketInstance = new WebSocket( AreaMap.Config.websocketUrl );
+                } catch ( e ) {
+                    Alert.show( "WebSocket 创建链接时发生错误！" );
+                }
 
                 $this.parent().data( "webSocketInstance", webSocketInstance );
 
